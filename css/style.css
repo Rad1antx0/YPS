@@ -2175,6 +2175,10 @@ span.gallery-text {
   white-space: nowrap;
   padding: 0 20px;
   position: relative;
+  display: flex;             /* Use flexbox for centering */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  height: 70px;             /* Adjust based on your design */
 }
 
 .scrolling-text {
@@ -2182,8 +2186,20 @@ span.gallery-text {
   white-space: nowrap;
   animation: scroll-left 15s linear infinite;
   color: #e32828;
-  font-size: 140%;
+  font-size: 160%;           /* Keep the current size */
+  position: absolute;        /* For exact centering control */
 }
+
+/* Animation for scrolling effect */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 
 
